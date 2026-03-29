@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap, XCircle } from 'lucide-react';
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
   <motion.div
@@ -212,6 +212,80 @@ export default function App() {
                 <Link to="/servicio/ads" className="font-mono flex items-center text-primary text-sm font-semibold hover:text-white transition-colors cursor-pointer mt-auto">
                   <ChevronRight className="w-4 h-4 mr-1"/> Ver detalles
                 </Link>
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Identificación (Pain vs Dream) - CRO Section */}
+      <section className="py-24 px-6 relative z-10 bg-black/40 border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <FadeUp>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">¿Por qué algunas agencias venden más rápido?</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                El mercado automotriz cambió. Los compradores ya no pasean por las concesionarias; primero miran, comparan, confían y deciden <strong className="text-white">desde su celular</strong>.
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* The Old Way */}
+            <FadeUp delay={0.1}>
+              <div className="surface-glass p-8 md:p-10 border-red-500/10 bg-gradient-to-br from-red-950/20 to-transparent h-full relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-[60px] -z-10" />
+                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
+                  <XCircle className="w-8 h-8 text-red-500 mr-4" />
+                  La Agencia Tradicional
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Sube fotos del inventario tomadas con el celular, mal iluminadas y poco atractivas.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Gasta en anuncios, pero solo le llegan "curiosos" que preguntan el precio y desaparecen.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Tarda horas en responder mensajes porque el equipo está ocupado en el local.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Depende de los clientes que entran caminando y pelea constantemente por el precio final.
+                  </li>
+                </ul>
+              </div>
+            </FadeUp>
+
+            {/* The Grow Labs Way */}
+            <FadeUp delay={0.2}>
+              <div className="surface-glass p-8 md:p-10 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent h-full relative group">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full blur-[70px] -z-10 transition-all duration-500 group-hover:scale-110" />
+                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
+                  <CheckCircle2 className="w-8 h-8 text-primary mr-4 drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]" />
+                  Con el Motor de Grow Labs
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Audiovisual Premium:</strong> Contenido que resalta el lujo y diseño de cada vehículo, vendiendo por los ojos antes de que consulten.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Leads Hiper-calificados:</strong> Algoritmos de Meta Ads que impactan solo a usuarios con intención de compra real en tu zona.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Automatización 24/7:</strong> Respuestas instantáneas mediante IA. Clasifica al cliente y agenda sin intervención humana.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Autoridad y Confianza:</strong> Transmiten prestigio digital total. El cliente ya está "vendido" cuando pisa la agencia.</span>
+                  </li>
+                </ul>
               </div>
             </FadeUp>
           </div>
