@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap, XCircle, Camera, Play } from 'lucide-react';
+import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap, XCircle, Camera, Play, Menu, X } from 'lucide-react';
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
   <motion.div
@@ -25,6 +25,7 @@ export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,7 +72,7 @@ export default function App() {
       <div className="glow-bg" />
       
       {/* Navbar Minimalista */}
-      <nav className="fixed top-0 w-full z-50 surface-glass rounded-none border-t-0 border-x-0 !bg-black/50">
+      <nav className="fixed top-0 w-full z-50 surface-glass rounded-none border-t-0 border-x-0 !bg-black/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="font-display font-black text-2xl tracking-tighter cursor-pointer flex items-center gap-1">
             <span className="text-white">Grow</span>
@@ -86,7 +87,34 @@ export default function App() {
           <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary !px-6 !py-2 !text-sm hidden sm:flex">
             Contáctanos
           </button>
+
+          {/* Mobile Menu Toggle */}
+          <button className="md:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Dropdown */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-t border-white/10 bg-black/95 overflow-hidden"
+            >
+              <div className="flex flex-col px-6 py-6 gap-2">
+                <a href="#solucion" onClick={() => setIsMenuOpen(false)} className="text-gray-300 hover:text-white font-medium py-3 text-lg border-b border-white/5">La Solución</a>
+                <a href="#servicios" onClick={() => setIsMenuOpen(false)} className="text-gray-300 hover:text-white font-medium py-3 text-lg border-b border-white/5">Servicios</a>
+                <a href="#galeria" onClick={() => setIsMenuOpen(false)} className="text-gray-300 hover:text-white font-medium py-3 text-lg border-b border-white/5">Galería</a>
+                <a href="#planes" onClick={() => setIsMenuOpen(false)} className="text-gray-300 hover:text-white font-medium py-3 text-lg border-b border-white/5">Planes</a>
+                <button onClick={() => { setIsMenuOpen(false); document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-primary w-full mt-4 h-12">
+                  Contáctanos
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Hero Section */}
