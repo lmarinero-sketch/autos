@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap, XCircle } from 'lucide-react';
+import { ChevronRight, LayoutTemplate, Share2, Video, Target, CheckCircle2, MessageCircle, ArrowRight, ShieldCheck, Zap, XCircle, Camera, Play } from 'lucide-react';
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) => (
   <motion.div
@@ -80,9 +80,10 @@ export default function App() {
           <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
             <a href="#solucion" className="hover:text-white transition-colors">La Solución</a>
             <a href="#servicios" className="hover:text-white transition-colors">Servicios</a>
+            <a href="#galeria" className="hover:text-white transition-colors">Galería</a>
             <a href="#planes" className="hover:text-white transition-colors">Planes</a>
           </div>
-          <button className="btn-secondary !px-6 !py-2 !text-sm hidden sm:flex">
+          <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary !px-6 !py-2 !text-sm hidden sm:flex">
             Contáctanos
           </button>
         </div>
@@ -114,7 +115,7 @@ export default function App() {
               Sistema integral web, contenido audiovisual y publicidad online diseñada exclusivamente para escalar tus ventas vehiculares.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="btn-primary w-full sm:w-auto">
+              <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary w-full sm:w-auto">
                 Acelera tus Ventas <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button className="btn-secondary w-full sm:w-auto">
@@ -425,8 +426,81 @@ export default function App() {
         </div>
       </section>
 
+      {/* Video Review Signature Feature */}
+      <section className="py-24 px-6 relative z-10 bg-black/80 border-y border-white/5 overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 -z-10 pointer-events-none" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <FadeUp delay={0.1}>
+              <div className="relative rounded-2xl overflow-hidden aspect-video border border-white/10 group cursor-pointer shadow-[0_0_50px_rgba(0,163,255,0.1)]">
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10" />
+                <img src="/DSC_0061.jpg" alt="Video Review Setup" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-primary/90 text-black flex items-center justify-center shadow-[0_0_30px_rgba(0,163,255,0.6)] group-hover:scale-110 transition-transform">
+                    <Play className="w-8 h-8 ml-1 fill-black" />
+                  </div>
+                </div>
+                
+                {/* Fake Timeline HUD */}
+                <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center gap-3">
+                  <div className="text-white font-mono text-sm font-bold bg-black/50 px-2 py-1 rounded">01:24</div>
+                  <div className="h-1 bg-white/30 rounded-full flex-1 overflow-hidden">
+                    <div className="h-full bg-primary w-1/3 shadow-[0_0_10px_rgba(0,163,255,0.8)]" />
+                  </div>
+                  <div className="text-white font-mono text-sm font-bold bg-black/50 px-2 py-1 rounded">04:15</div>
+                </div>
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.2}>
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono border border-primary/20">
+                  <Video className="w-4 h-4" />
+                  NUESTRA OBRA MAESTRA
+                </div>
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                  La anatomía de un <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">Video Review Premium</span>
+                </h2>
+                <p className="text-xl text-gray-400 leading-relaxed font-light">
+                  No es apretar el botón de grabar y listar repuestos. Tomamos la "joya" de tu inventario y construimos una <strong>superproducción audiovisual</strong> calculada para generar hiper-deseo de compra.
+                </p>
+                
+                <ul className="space-y-5 mt-8">
+                  <li className="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                    <div className="mt-1 bg-primary/10 text-primary p-2 rounded-lg shrink-0"><Camera className="w-5 h-5" /></div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg mb-1">Sesión Fotográfica Exhaustiva</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">Capturamos minuciosamente cada detalle premium: llantas, acabados del tablero, costuras del cuero y líneas de diseño exterior con iluminación y óptica de cine.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                    <div className="mt-1 bg-primary/10 text-primary p-2 rounded-lg shrink-0"><Target className="w-5 h-5" /></div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg mb-1">Tomas Dinámicas de Acción</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">Secuencias en movimiento (dron/estabilizador) de la unidad transitando a máxima calidad, transmitiendo al cliente la adrenalina y el prestigio de estar de verdad frente al volante.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/5">
+                    <div className="mt-1 bg-primary/10 text-primary p-2 rounded-lg shrink-0"><MessageCircle className="w-5 h-5" /></div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg mb-1">Guion = Sentencia de Venta</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">Explicamos al detalle cada característica tecnológica y de confort. Cada ángulo mostrado y cada palabra pronunciada están diseñados psicológicamente para erradicar objeciones y cerrar el trato.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </FadeUp>
+            
+          </div>
+        </div>
+      </section>
+
       {/* Galeria de Trabajo */}
-      <section className="py-24 px-6 relative z-10 bg-black">
+      <section id="galeria" className="py-24 px-6 relative z-10 bg-black">
         <div className="max-w-7xl mx-auto">
           <FadeUp>
             <div className="text-center mb-16">
@@ -472,7 +546,7 @@ export default function App() {
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Publicaciones Básicas</span></li>
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Setup de Meta Ads</span></li>
                 </ul>
-                <button className="btn-secondary w-full">Empezar</button>
+                <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary w-full">Empezar</button>
               </div>
 
               {/* Profesional - Featured */}
@@ -491,7 +565,7 @@ export default function App() {
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Contenido Regular + Reels</span></li>
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Gestión de Meta Ads</span></li>
                 </ul>
-                <button className="btn-primary w-full">Seleccionar Plan</button>
+                <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary w-full">Seleccionar Plan</button>
               </div>
 
                {/* Full */}
@@ -507,7 +581,7 @@ export default function App() {
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-white font-medium pl-1 bg-primary/20 rounded px-1">Videos Review</span></li>
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Ads Estratégicos</span></li>
                 </ul>
-                <button className="btn-secondary w-full">Empezar</button>
+                <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary w-full">Empezar</button>
               </div>
             </div>
           </FadeUp>
@@ -515,7 +589,7 @@ export default function App() {
       </section>
 
       {/* CTA Cierre */}
-      <section className="py-24 px-6 relative z-10 overflow-hidden">
+      <section id="contacto" className="py-24 px-6 relative z-10 overflow-hidden">
         <div className="absolute inset-0 z-0">
            <img 
             src="/DSC_0186.jpg" 
@@ -621,9 +695,12 @@ export default function App() {
       </footer>
 
       {/* Floating WhatsApp BTN */}
-      <a href="#" className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,163,255,0.3)] hover:scale-110 hover:shadow-[0_0_30px_rgba(0,163,255,0.5)] transition-all duration-300">
+      <button 
+        onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,163,255,0.3)] hover:scale-110 hover:shadow-[0_0_30px_rgba(0,163,255,0.5)] transition-all duration-300"
+      >
         <MessageCircle className="w-8 h-8" />
-      </a>
+      </button>
       {/* Success Modal */}
       <AnimatePresence>
         {showModal && (
