@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-300;
+  }
+}
+
+@layer components {
+  /* Effect layer for auras */
+  .glow-bg {
+    @apply absolute inset-0 -z-10 pointer-events-none;
+    background: radial-gradient(circle at 10% 20%, rgba(30,58,138,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(14,116,144,0.15) 0%, transparent 40%);
+  }
+
+  /* Glassmorphism Surface */
+  .surface-glass {
+    @apply bg-white/[0.03] backdrop-blur-[12px] border border-white/10 rounded-2xl;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-bold rounded-full 
+    bg-primary text-black transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+    hover:scale-105 hover:shadow-[0_0_20px_rgba(0,163,255,0.4)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-semibold rounded-full 
+    border border-white/20 text-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+    hover:border-primary/50 hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black;
+  }
+
+  /* Interactive Cards */
+  .interactive-card {
+    @apply surface-glass transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+    hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,163,255,0.1)];
+  }
+}
+
+/* Animations that are global if not using Framer motion */
+.slide-up-fade {
+  animation: slideUpFade 0.6s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
