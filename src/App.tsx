@@ -95,7 +95,7 @@ export default function App() {
           {/* Unsplash Showroom Placeholder con overlay oscuro */}
           <div className="absolute inset-0 bg-black/80 z-10" />
           <img 
-            src="/DSC_0061.jpg" 
+            src="/DSC_0061.webp" 
             alt="Luxury Car Showroom" 
             className="w-full h-full object-cover opacity-50"
           />
@@ -395,7 +395,7 @@ export default function App() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0148.jpg" className="w-full h-full object-cover" alt="Agencia" />
+                  <img src="/DSC_0148.webp" className="w-full h-full object-cover" alt="Agencia" />
                   <Zap className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Agencias Independientes</h3>
@@ -405,7 +405,7 @@ export default function App() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0170.jpg" className="w-full h-full object-cover" alt="Concesionaria" />
+                  <img src="/DSC_0170.webp" className="w-full h-full object-cover" alt="Concesionaria" />
                   <ShieldCheck className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Concesionarias Oficiales</h3>
@@ -415,7 +415,7 @@ export default function App() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0175.jpg" className="w-full h-full object-cover" alt="Usados" />
+                  <img src="/DSC_0175.webp" className="w-full h-full object-cover" alt="Usados" />
                   <Target className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Especialistas en Usados</h3>
@@ -435,7 +435,7 @@ export default function App() {
             <FadeUp delay={0.1}>
               <div className="relative rounded-2xl overflow-hidden aspect-video border border-white/10 group cursor-pointer shadow-[0_0_50px_rgba(0,163,255,0.1)]">
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10" />
-                <img src="/DSC_0061.jpg" alt="Video Review Setup" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/DSC_0061.webp" alt="Video Review Setup" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 z-20 flex items-center justify-center">
@@ -510,9 +510,9 @@ export default function App() {
             
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                "/DSC_0284.jpg", "/DSC_0486.jpg", "/DSC_0588.jpg",
-                "/DSC_0659.jpg", "/DSC_0743.jpg", "/DSC_0821.jpg",
-                "/DSC_0992.jpg", "/DSC_1027.jpg", "/DSC_1218.jpg"
+                "/DSC_0284.webp", "/DSC_0486.webp", "/DSC_0588.webp",
+                "/DSC_0659.webp", "/DSC_0743.webp", "/DSC_0821.webp",
+                "/DSC_0992.webp", "/DSC_1027.webp", "/DSC_1218.webp"
               ].map((src, i) => (
                 <div key={i} className="relative group overflow-hidden rounded-xl aspect-[4/3] surface-glass !p-1 border-white/5">
                   <img src={src} loading="lazy" className="w-full h-full object-cover rounded-lg transition-transform duration-700 ease-out group-hover:scale-110" alt={`Trabajo Audiovisual ${i + 1}`} />
@@ -600,7 +600,7 @@ export default function App() {
       <section id="contacto" className="py-24 px-6 relative z-10 overflow-hidden">
         <div className="absolute inset-0 z-0">
            <img 
-            src="/DSC_0186.jpg" 
+            src="/DSC_0186.webp" 
             alt="Business planning" 
             className="w-full h-full object-cover opacity-20"
           />
