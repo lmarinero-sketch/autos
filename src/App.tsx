@@ -154,33 +154,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Problema vs Solución */}
-      <section id="solucion" className="py-24 px-6 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <FadeUp>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-              <div className="surface-glass p-10 lg:p-14 border-danger/20 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-danger/5 rounded-full blur-[80px]" />
-                <h3 className="text-danger font-mono text-sm mb-4 tracking-wider">EL PROBLEMA</h3>
-                <h2 className="text-3xl font-display font-bold text-white mb-6">Presencia digital estancada.</h2>
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  Muchas agencias invierten en vehículos increíbles, pero fallan en mostrarlos. Páginas web obsoletas, fotos genéricas y una gestión de redes sociales sin estrategia resultan en oportunidades y leads perdidos diariamente.
-                </p>
-              </div>
-
-              <div className="surface-glass p-10 lg:p-14 border-primary/20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px]" />
-                <h3 className="text-primary font-mono text-sm mb-4 tracking-wider">LA SOLUCIÓN</h3>
-                <h2 className="text-3xl font-display font-bold text-white mb-6">El motor para tus ventas.</h2>
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  Un ecosistema digital a medida: catálogos interactivos rápidos, contenido audiovisual cinematográfico y publicidad hiper-segmentada para conectar tu stock premium con los compradores correctos.
-                </p>
-              </div>
-            </div>
-          </FadeUp>
-        </div>
-      </section>
-
       {/* Servicios GRID */}
       <section id="servicios" className="py-24 px-6 relative z-10 bg-black/40">
         <div className="max-w-7xl mx-auto">
@@ -244,213 +217,6 @@ export default function App() {
               </div>
             </FadeUp>
           </div>
-        </div>
-      </section>
-
-      {/* Identificación (Pain vs Dream) - CRO Section */}
-      <section className="py-24 px-6 relative z-10 bg-black/40 border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <FadeUp>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">¿Por qué algunas agencias venden más rápido?</h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                El mercado automotriz cambió. Los compradores ya no pasean por las concesionarias; primero miran, comparan, confían y deciden <strong className="text-white">desde su celular</strong>.
-              </p>
-            </div>
-          </FadeUp>
-
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* The Old Way */}
-            <FadeUp delay={0.1}>
-              <div className="surface-glass p-8 md:p-10 border-red-500/10 bg-gradient-to-br from-red-950/20 to-transparent h-full relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-[60px] -z-10" />
-                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
-                  <XCircle className="w-8 h-8 text-red-500 mr-4" />
-                  La Agencia Tradicional
-                </h3>
-                <ul className="space-y-6">
-                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
-                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
-                    Sube fotos del inventario tomadas con el celular, mal iluminadas y poco atractivas.
-                  </li>
-                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
-                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
-                    Gasta en anuncios, pero solo le llegan "curiosos" que preguntan el precio y desaparecen.
-                  </li>
-                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
-                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
-                    Tarda horas en responder mensajes porque el equipo está ocupado en el local.
-                  </li>
-                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
-                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
-                    Depende de los clientes que entran caminando y pelea constantemente por el precio final.
-                  </li>
-                </ul>
-              </div>
-            </FadeUp>
-
-            {/* The Grow Labs Way */}
-            <FadeUp delay={0.2}>
-              <div className="surface-glass p-8 md:p-10 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent h-full relative group">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full blur-[70px] -z-10 transition-all duration-500 group-hover:scale-110" />
-                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
-                  <CheckCircle2 className="w-8 h-8 text-primary mr-4 drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]" />
-                  Con el Motor de Grow Labs
-                </h3>
-                <ul className="space-y-6">
-                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
-                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
-                    <span><strong className="text-white">Audiovisual Premium:</strong> Contenido que resalta el lujo y diseño de cada vehículo, vendiendo por los ojos antes de que consulten.</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
-                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
-                    <span><strong className="text-white">Leads Hiper-calificados:</strong> Algoritmos de Meta Ads que impactan solo a usuarios con intención de compra real en tu zona.</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
-                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
-                    <span><strong className="text-white">Automatización 24/7:</strong> Respuestas instantáneas mediante IA. Clasifica al cliente y agenda sin intervención humana.</span>
-                  </li>
-                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
-                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
-                    <span><strong className="text-white">Autoridad y Confianza:</strong> Transmiten prestigio digital total. El cliente ya está "vendido" cuando pisa la agencia.</span>
-                  </li>
-                </ul>
-              </div>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
-      {/* Estrategia de Crecimiento & Meta Ads */}
-      <section className="py-24 px-6 relative z-10 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto">
-          <FadeUp>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">El Motor de tu Crecimiento</h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                No se trata solo de imágenes perfectas; combinamos contenido premium del inventario con distribución hiper-segmentada para vender los vehículos más rápido.
-              </p>
-            </div>
-          </FadeUp>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* The Explanation / Meta Ads */}
-            <FadeUp delay={0.1}>
-              <div className="space-y-8">
-                <div className="surface-glass p-8 lg:p-10 border-primary/20 relative">
-                  <div className="absolute -top-6 -right-6 lg:-right-4 bg-primary text-black font-bold p-4 rounded-full shadow-[0_0_20px_rgba(0,163,255,0.4)]">
-                    <Target className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">El Algoritmo de Meta Ads</h3>
-                  <p className="text-gray-400 leading-relaxed text-lg mb-6">
-                    Plataformas como <strong className="text-white font-medium">Facebook, Instagram y WhatsApp</strong> tienen identificados con precisión a los usuarios que tienen intenciones claras de cambiar su vehículo o comprar uno nuevo.
-                  </p>
-                  <p className="text-gray-400 leading-relaxed text-lg mb-6">
-                    Aprovechamos estos datos y creamos campañas hiper-segmentadas que muestran <strong className="text-primary font-medium">fotos y videos profesionales</strong> de tu agencia exactamente a esas personas interesadas.
-                  </p>
-                  <p className="text-white leading-relaxed text-lg font-medium bg-white/5 p-4 rounded-lg border-l-2 border-primary">
-                    Finalmente, derivamos ese tráfico calificado a tu página interactiva. Así incrementamos masivamente la interacción y le damos al cliente la posibilidad de ver todo acerca del vehículo que le interesa antes de enviarte un mensaje.
-                  </p>
-                </div>
-              </div>
-            </FadeUp>
-
-            {/* The Graphics (Growth) */}
-            <FadeUp delay={0.3}>
-              <div className="surface-glass p-8 lg:p-10 border-white/5 relative overflow-hidden">
-                <h3 className="text-2xl font-display font-bold text-white mb-10">El Impacto del Contenido Premium</h3>
-                
-                <div className="space-y-10">
-                  {/* Metric 1 */}
-                  <div>
-                    <div className="flex justify-between text-sm font-mono mb-3">
-                      <span className="text-gray-300">Visibilidad en Redes</span>
-                      <span className="text-primary font-bold text-lg">+350%</span>
-                    </div>
-                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
-                      <motion.div 
-                        initial={{ width: 0 }} whileInView={{ width: '85%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }} 
-                        className="h-full bg-gradient-to-r from-primary/40 to-primary rounded-full" 
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Frente a usar fotos caseras u obsoletas</p>
-                  </div>
-
-                  {/* Metric 2 */}
-                  <div>
-                    <div className="flex justify-between text-sm font-mono mb-3">
-                      <span className="text-gray-300">Confianza del Comprador</span>
-                      <span className="text-primary font-bold text-lg">Máxima</span>
-                    </div>
-                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
-                      <motion.div 
-                        initial={{ width: 0 }} whileInView={{ width: '95%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.7, ease: 'easeOut' }} 
-                        className="h-full bg-gradient-to-r from-primary/60 to-primary rounded-full" 
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Al exhibir videos 4K y reportajes profesionales</p>
-                  </div>
-
-                  {/* Metric 3 */}
-                  <div>
-                    <div className="flex justify-between text-sm font-mono mb-3">
-                      <span className="text-gray-300">Aumento de Cierres Reales</span>
-                      <span className="text-white font-bold text-lg">+200%</span>
-                    </div>
-                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
-                      <motion.div 
-                        initial={{ width: 0 }} whileInView={{ width: '70%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.9, ease: 'easeOut' }} 
-                        className="h-full bg-gradient-to-r from-blue-300 to-white rounded-full" 
-                      />
-                    </div>
-                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Gracias a la derivación calificada por Meta Ads</p>
-                  </div>
-                </div>
-              </div>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Audience */}
-      <section className="py-24 px-6 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <FadeUp>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-center text-white mb-16">Diseñado para líderes del mercado</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0148.webp" className="w-full h-full object-cover" alt="Agencia" />
-                  <Zap className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Agencias Independientes</h3>
-                <p className="text-gray-400">Profesionaliza tu presencia digital y compite visualmente con los gigantes de la industria.</p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0170.webp" className="w-full h-full object-cover" alt="Concesionaria" />
-                  <ShieldCheck className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Concesionarias Oficiales</h3>
-                <p className="text-gray-400">Genera contenido exclusivo local manteniendo las estrictas directrices premium de tu marca.</p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/40 z-10" />
-                  <img src="/DSC_0175.webp" className="w-full h-full object-cover" alt="Usados" />
-                  <Target className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Especialistas en Usados</h3>
-                <p className="text-gray-400">Demuestra transparencia y calidad con fotos de alta resolución e inspecciones en video 4K.</p>
-              </div>
-            </div>
-          </FadeUp>
         </div>
       </section>
 
@@ -549,6 +315,213 @@ export default function App() {
               ))}
             </div>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* Identificación (Pain vs Dream) - CRO Section */}
+      <section className="py-24 px-6 relative z-10 bg-black/40 border-y border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <FadeUp>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">¿Por qué algunas agencias venden más rápido?</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                El mercado automotriz cambió. Los compradores ya no pasean por las concesionarias; primero miran, comparan, confían y deciden <strong className="text-white">desde su celular</strong>.
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* The Old Way */}
+            <FadeUp delay={0.1}>
+              <div className="surface-glass p-8 md:p-10 border-red-500/10 bg-gradient-to-br from-red-950/20 to-transparent h-full relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-[60px] -z-10" />
+                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
+                  <XCircle className="w-8 h-8 text-red-500 mr-4" />
+                  La Agencia Tradicional
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Sube fotos del inventario tomadas con el celular, mal iluminadas y poco atractivas.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Gasta en anuncios, pero solo le llegan "curiosos" que preguntan el precio y desaparecen.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Tarda horas en responder mensajes porque el equipo está ocupado en el local.
+                  </li>
+                  <li className="flex items-start text-gray-400 text-lg leading-relaxed">
+                    <span className="text-red-500 font-bold mr-4 mt-1">✕</span>
+                    Depende de los clientes que entran caminando y pelea constantemente por el precio final.
+                  </li>
+                </ul>
+              </div>
+            </FadeUp>
+
+            {/* The Grow Labs Way */}
+            <FadeUp delay={0.2}>
+              <div className="surface-glass p-8 md:p-10 border-primary/30 bg-gradient-to-br from-primary/10 to-transparent h-full relative group">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full blur-[70px] -z-10 transition-all duration-500 group-hover:scale-110" />
+                <h3 className="text-2xl font-display font-bold text-white mb-8 flex items-center">
+                  <CheckCircle2 className="w-8 h-8 text-primary mr-4 drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]" />
+                  Con el Motor de Grow Labs
+                </h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Audiovisual Premium:</strong> Contenido que resalta el lujo y diseño de cada vehículo, vendiendo por los ojos antes de que consulten.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Leads Hiper-calificados:</strong> Algoritmos de Meta Ads que impactan solo a usuarios con intención de compra real en tu zona.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Automatización 24/7:</strong> Respuestas instantáneas mediante IA. Clasifica al cliente y agenda sin intervención humana.</span>
+                  </li>
+                  <li className="flex items-start text-gray-300 text-lg leading-relaxed">
+                    <CheckCircle2 className="w-6 h-6 text-primary mr-4 mt-1 shrink-0" />
+                    <span><strong className="text-white">Autoridad y Confianza:</strong> Transmiten prestigio digital total. El cliente ya está "vendido" cuando pisa la agencia.</span>
+                  </li>
+                </ul>
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Audience */}
+      <section className="py-24 px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <FadeUp>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-center text-white mb-16">Diseñado para líderes del mercado</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
+                  <div className="absolute inset-0 bg-black/40 z-10" />
+                  <img src="/DSC_0148.webp" className="w-full h-full object-cover" alt="Agencia" />
+                  <Zap className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Agencias Independientes</h3>
+                <p className="text-gray-400">Profesionaliza tu presencia digital y compite visualmente con los gigantes de la industria.</p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
+                  <div className="absolute inset-0 bg-black/40 z-10" />
+                  <img src="/DSC_0170.webp" className="w-full h-full object-cover" alt="Concesionaria" />
+                  <ShieldCheck className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Concesionarias Oficiales</h3>
+                <p className="text-gray-400">Genera contenido exclusivo local manteniendo las estrictas directrices premium de tu marca.</p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="w-full h-48 mb-6 rounded-2xl overflow-hidden relative">
+                  <div className="absolute inset-0 bg-black/40 z-10" />
+                  <img src="/DSC_0175.webp" className="w-full h-full object-cover" alt="Usados" />
+                  <Target className="absolute bottom-4 right-4 text-primary z-20 w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Especialistas en Usados</h3>
+                <p className="text-gray-400">Demuestra transparencia y calidad con fotos de alta resolución e inspecciones en video 4K.</p>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Estrategia de Crecimiento & Meta Ads */}
+      <section className="py-24 px-6 relative z-10 overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto">
+          <FadeUp>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">El Motor de tu Crecimiento</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                No se trata solo de imágenes perfectas; combinamos contenido premium del inventario con distribución hiper-segmentada para vender los vehículos más rápido.
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* The Explanation / Meta Ads */}
+            <FadeUp delay={0.1}>
+              <div className="space-y-8">
+                <div className="surface-glass p-8 lg:p-10 border-primary/20 relative">
+                  <div className="absolute -top-6 -right-6 lg:-right-4 bg-primary text-black font-bold p-4 rounded-full shadow-[0_0_20px_rgba(0,163,255,0.4)]">
+                    <Target className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">El Algoritmo de Meta Ads</h3>
+                  <p className="text-gray-400 leading-relaxed text-lg mb-6">
+                    Plataformas como <strong className="text-white font-medium">Facebook, Instagram y WhatsApp</strong> tienen identificados con precisión a los usuarios que tienen intenciones claras de cambiar su vehículo o comprar uno nuevo.
+                  </p>
+                  <p className="text-gray-400 leading-relaxed text-lg mb-6">
+                    Aprovechamos estos datos y creamos campañas hiper-segmentadas que muestran <strong className="text-primary font-medium">fotos y videos profesionales</strong> de tu agencia exactamente a esas personas interesadas.
+                  </p>
+                  <p className="text-white leading-relaxed text-lg font-medium bg-white/5 p-4 rounded-lg border-l-2 border-primary">
+                    Finalmente, derivamos ese tráfico calificado a tu página interactiva. Así incrementamos masivamente la interacción y le damos al cliente la posibilidad de ver todo acerca del vehículo que le interesa antes de enviarte un mensaje.
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+
+            {/* The Graphics (Growth) */}
+            <FadeUp delay={0.3}>
+              <div className="surface-glass p-8 lg:p-10 border-white/5 relative overflow-hidden">
+                <h3 className="text-2xl font-display font-bold text-white mb-10">El Impacto del Contenido Premium</h3>
+                
+                <div className="space-y-10">
+                  {/* Metric 1 */}
+                  <div>
+                    <div className="flex justify-between text-sm font-mono mb-3">
+                      <span className="text-gray-300">Visibilidad en Redes</span>
+                      <span className="text-primary font-bold text-lg">+350%</span>
+                    </div>
+                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
+                      <motion.div 
+                        initial={{ width: 0 }} whileInView={{ width: '85%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }} 
+                        className="h-full bg-gradient-to-r from-primary/40 to-primary rounded-full" 
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Frente a usar fotos caseras u obsoletas</p>
+                  </div>
+
+                  {/* Metric 2 */}
+                  <div>
+                    <div className="flex justify-between text-sm font-mono mb-3">
+                      <span className="text-gray-300">Confianza del Comprador</span>
+                      <span className="text-primary font-bold text-lg">Máxima</span>
+                    </div>
+                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
+                      <motion.div 
+                        initial={{ width: 0 }} whileInView={{ width: '95%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.7, ease: 'easeOut' }} 
+                        className="h-full bg-gradient-to-r from-primary/60 to-primary rounded-full" 
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Al exhibir videos 4K y reportajes profesionales</p>
+                  </div>
+
+                  {/* Metric 3 */}
+                  <div>
+                    <div className="flex justify-between text-sm font-mono mb-3">
+                      <span className="text-gray-300">Aumento de Cierres Reales</span>
+                      <span className="text-white font-bold text-lg">+200%</span>
+                    </div>
+                    <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden shadow-inner">
+                      <motion.div 
+                        initial={{ width: 0 }} whileInView={{ width: '70%' }} viewport={{ once: true }} transition={{ duration: 1.5, delay: 0.9, ease: 'easeOut' }} 
+                        className="h-full bg-gradient-to-r from-blue-300 to-white rounded-full" 
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-3 font-mono uppercase tracking-wider">Gracias a la derivación calificada por Meta Ads</p>
+                  </div>
+                </div>
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
 
