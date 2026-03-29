@@ -538,8 +538,8 @@ export default function App() {
               <div className="surface-glass p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-display font-bold text-white mb-2">Básico</h3>
                 <p className="text-gray-400 text-sm mb-6">El punto de partida ideal.</p>
-                <div className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8">
-                  <span className="text-xl text-gray-400 font-normal">Consulta</span>
+                <div className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8 flex items-center justify-center gap-1">
+                  $200 <span className="text-xl text-gray-400 font-normal mt-2">usd/mes</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Diseño Web Profesional</span></li>
@@ -556,8 +556,8 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-white mb-2">Profesional</h3>
                 <p className="text-gray-400 text-sm mb-6">Para agencias en crecimiento.</p>
-                <div className="text-4xl font-bold text-primary mb-8 border-b border-white/10 pb-8">
-                  <span className="text-xl text-gray-400 font-normal">Consulta</span>
+                <div className="text-4xl font-bold text-primary mb-8 border-b border-white/10 pb-8 flex items-center justify-center gap-1">
+                  $350 <span className="text-xl text-primary/70 font-normal mt-2">usd/mes</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-white font-medium">Web + CRM Integrado</span></li>
@@ -572,8 +572,8 @@ export default function App() {
                <div className="surface-glass p-8 h-full flex flex-col">
                 <h3 className="text-2xl font-display font-bold text-white mb-2">Premium</h3>
                 <p className="text-gray-400 text-sm mb-6">Dominio absoluto del mercado.</p>
-                <div className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8">
-                  <span className="text-xl text-gray-400 font-normal">Consulta</span>
+                <div className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8 flex items-center justify-center gap-1">
+                  $500 <span className="text-xl text-gray-400 font-normal mt-2">usd/mes</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary shrink-0" /><span className="text-gray-300">Web Avanzada + CRM</span></li>
@@ -584,6 +584,14 @@ export default function App() {
                 <button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary w-full">Empezar</button>
               </div>
             </div>
+
+            <FadeUp delay={0.4}>
+              <div className="mt-12 max-w-3xl mx-auto text-center surface-glass p-6 bg-white/5 border-t border-white/5">
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  <strong className="text-primary font-bold">Importante - Sobre la Inversión en Anuncios:</strong> Los valores indicados corresponden a la gestión de plataforma, producción audiovisual y honorarios estratégicos. <strong className="text-white font-medium">Ningún plan incluye presupuesto para invertir directamente en pauta (Meta Ads, etc)</strong>. Dicho presupuesto lo define el cliente en sus cuentas publicitarias; nosotros diseñamos la estrategia y sugerimos el monto mensual necesario en base a sus metas de venta.
+                </p>
+              </div>
+            </FadeUp>
           </FadeUp>
         </div>
       </section>
